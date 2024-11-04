@@ -1,0 +1,176 @@
+:root {
+  --primary: #ffffff;
+  --bg: #000000;
+  --hover-color: #3800de;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 500vh;
+}
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+  background-color: var(--bg);
+  color: #000000;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  background-color: var(--bg);
+  border-bottom: 1px solid #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar a {
+  color: var(--primary);
+  text-decoration: solid;
+}
+
+.navbar a:hover {
+  color: var(--hover-color);
+  text-decoration: none;
+  text-shadow: 0.2px 0.2px #ffffff;
+}
+
+/* Portfolio section */
+.portofolio {
+  min-height: 130vh;
+  padding-top: 4rem;
+  background-image: url("/cv/Image/bg.jpg");
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.portofolio:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0) 7%, rgba(0, 0, 0, 0.3) 13%);
+}
+
+.portofolio .content h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  color: var(--primary);
+  text-shadow: -2px -2px 0 #020202, 2px -2px 0 #000000, 0 -2px 2px #000000,
+    2px 2px 0 #000000;
+}
+
+.portofolio .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5rem;
+  padding: 2rem 3rem;
+  margin-top: 1rem;
+}
+
+.porto-image {
+  padding: 0.5rem;
+}
+
+.porto-image img {
+  width: 90%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.porto-image h2 {
+  width: 100%;
+  padding-top: 1rem;
+  justify-content: center;
+  display: flex;
+  font-size: 1.1rem;
+  color: var(--primary);
+  text-shadow: -1.5px -1.5px 0 #020202, 1.5px -1.5px 0 #000000,
+    0 -1.5px 1.5px #000000, 1.5px 1.5px 0 #000000;
+}
+
+/* Profil Section */
+.profil {
+  padding-top: 4rem;
+  padding-bottom: 7.5rem;
+}
+
+.profil .profil-judul {
+  display: flex;
+  align-items: center;
+}
+
+.profil .profil-judul h1,
+.pendidikan .pendidikan-judul h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  padding-top: 2rem;
+  padding-left: 3rem;
+}
+
+.profil .profil-judul img {
+  align-items: center;
+  max-width: 70px;
+  margin: 3rem 3rem 0;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profil .profil-isi h2 {
+  color: var(--primary);
+  font-size: 1rem;
+  margin: 1.2rem 3rem;
+}
+
+.profil .profil-isi h2 span {
+  text-align: center;
+  padding-inline: 0.8rem;
+}
+
+/* Pendidikan Section*/
+.pendidikan {
+  padding-top: 5rem;
+}
+
+.pendidikan ul {
+  list-style-type: circle;
+  padding-top: 2rem;
+  color: var(--primary);
+}
+
+.pendidikan li {
+  margin-bottom: 1.5rem;
+  margin-left: 3.5rem;
+}
+
+.pendidikan h3 {
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.pendidikan p {
+  margin: 0.3rem 0;
+}
